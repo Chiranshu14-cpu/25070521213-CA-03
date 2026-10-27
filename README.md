@@ -141,29 +141,29 @@ erDiagram
 sequenceDiagram
     autonumber
     actor Browser as User Browser
-    participant Vite as Vite Dev Proxy (:5173)
-    participant Express as Express Server (:5000)
+    participant Vite as Vite Dev Proxy port 5173
+    participant Express as Express Server port 5000
     participant Auth as Auth Middleware
-    participant Mongo as MongoDB (:27017)
+    participant Mongo as MongoDB port 27017
     participant NHTSA as NHTSA vPIC API
 
     Browser->>Vite: GET /api/vehicles
     Vite->>Express: Forward /api/vehicles
-    Express->>Mongo: Vehicle.find()
+    Express->>Mongo: Vehicle.find query
     Mongo-->>Express: Return 7 verified EV documents
-    Express-->>Browser: JSON { success: true, count: 7, vehicles: [...] }
+    Express-->>Browser: JSON response with vehicles array
 
     Browser->>Vite: POST /api/auth/login
     Vite->>Express: Forward credentials
-    Express->>Mongo: User.findOne({ email })
+    Express->>Mongo: User.findOne by email
     Mongo-->>Express: User document with bcrypt hash
-    Express->>Express: bcrypt.compare(password, hash)
-    Express-->>Browser: "Set-Cookie: token=JWT (HttpOnly; SameSite=Lax)"
+    Express->>Express: bcrypt password comparison
+    Express-->>Browser: Set-Cookie token=JWT HttpOnly SameSite=Lax
 
-    Browser->>Vite: GET /api/vehicle-lookup?vin=...
+    Browser->>Vite: GET /api/vehicle-lookup with VIN
     Vite->>Express: Forward VIN lookup
     alt Data in Cache
-        Express-->>Browser: Return cached decode (instant)
+        Express-->>Browser: Return cached decode instantly
     else Cache Miss
         Express->>NHTSA: Query US DOT vPIC API
         NHTSA-->>Express: Decode results
