@@ -158,7 +158,7 @@ sequenceDiagram
     Express->>Mongo: User.findOne({ email })
     Mongo-->>Express: User document with bcrypt hash
     Express->>Express: bcrypt.compare(password, hash)
-    Express-->>Browser: Set-Cookie: token=JWT (HttpOnly; SameSite=Lax)
+    Express-->>Browser: "Set-Cookie: token=JWT (HttpOnly; SameSite=Lax)"
 
     Browser->>Vite: GET /api/vehicle-lookup?vin=...
     Vite->>Express: Forward VIN lookup
