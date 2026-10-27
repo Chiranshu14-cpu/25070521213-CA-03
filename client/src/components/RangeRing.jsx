@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const RangeRing = ({ rangeKm, maxRange = 708, size = 68, strokeWidth = 5 }) => {
+const RangeRing = ({ rangeKm, maxRange = 857, size = 68, strokeWidth = 5 }) => {
   const [animatedOffset, setAnimatedOffset] = useState(0);
 
   const radius = (size - strokeWidth * 2) / 2;
@@ -18,7 +18,7 @@ const RangeRing = ({ rangeKm, maxRange = 708, size = 68, strokeWidth = 5 }) => {
   }, [rangeKm, maxRange, circumference, targetOffset]);
 
   return (
-    <div style={{ position: 'relative', width: size, height: size, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} title={`${rangeKm} km (${percentage}% of 708 km catalog maximum)`}>
+    <div style={{ position: 'relative', width: size, height: size, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} title={`${rangeKm} km (${percentage}% of 857 km catalog maximum)`}>
       <svg width={size} height={size} className="range-ring-svg">
         {/* Background track circle */}
         <circle

@@ -208,18 +208,18 @@ const Home = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', textAlign: 'center' }}>
             <div>
               <div style={{ fontSize: '2.4rem', fontWeight: 800, fontFamily: 'var(--font-display)', color: 'var(--accent-cyan)' }}>
-                708 <span style={{ fontSize: '1.1rem' }}>KM</span>
+                857 <span style={{ fontSize: '1.1rem' }}>KM</span>
               </div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
-                Maximum Verified Claimed Range
+                Maximum Verified Claimed Range (EQS 580 ARAI)
               </div>
             </div>
             <div>
               <div style={{ fontSize: '2.4rem', fontWeight: 800, fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}>
-                18 <span style={{ fontSize: '1.1rem' }}>MIN</span>
+                21 <span style={{ fontSize: '1.1rem' }}>MIN</span>
               </div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
-                Ultra-Rapid 10-80% DC Charging
+                Ultra-Rapid 10-80% 800V DC Charging
               </div>
             </div>
             <div>
@@ -254,7 +254,7 @@ const Home = () => {
               </p>
             </div>
             <Link to="/vehicles" className="btn btn-secondary">
-              View Full 7-Vehicle Catalog <ArrowRight size={16} />
+              View Full 10-Vehicle Catalog <ArrowRight size={16} />
             </Link>
           </div>
 
@@ -445,7 +445,7 @@ const Home = () => {
               <ArrowRight size={18} />
             </Link>
             <Link to="/vehicles" className="btn btn-secondary btn-lg">
-              Explore All 7 Vehicles
+              Explore All 10 Vehicles
             </Link>
           </div>
         </div>

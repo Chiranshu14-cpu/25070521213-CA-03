@@ -3,8 +3,8 @@ import { Search, Filter, RotateCcw, AlertCircle } from 'lucide-react';
 import VehicleCard from '../components/VehicleCard';
 import { useAuth } from '../context/AuthContext';
 
-const MANUFACTURERS = ['All', 'Porsche', 'BMW', 'Kia', 'Hyundai', 'BYD', 'Tata Motors', 'Mahindra'];
-const BODY_TYPES = ['All', 'Sedan', 'SUV', 'Crossover'];
+const MANUFACTURERS = ['All', 'Mercedes-Benz', 'BMW', 'Porsche', 'Audi', 'Rolls-Royce'];
+const BODY_TYPES = ['All', 'Sedan', 'SUV', 'Coupe'];
 const SORT_OPTIONS = [
   { label: 'Featured & Premium', value: 'default' },
   { label: 'Price: Low to High', value: 'price-asc' },
@@ -229,7 +229,7 @@ const Vehicles = () => {
               Try loosening your filters or resetting the search term to view the full collection.
             </p>
             <button type="button" onClick={handleResetFilters} className="btn btn-secondary">
-              View All 7 Vehicles
+              View All 10 Vehicles
             </button>
           </div>
         ) : (

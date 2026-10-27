@@ -26,37 +26,37 @@ const calculateVehicleMatch = (vehicle, answers) => {
     const price = vehicle.priceExShowroomINR;
     let budgetScore = 0.5;
 
-    if (budgetRange === 'budget') {
-      if (price <= 2500000) {
+    if (budgetRange === 'entry') {
+      if (price <= 15000000) {
         budgetScore = 1.0;
-        reasons.push('Fits directly within your under-₹25 Lakh budget target.');
-      } else if (price <= 4500000) {
-        budgetScore = 0.4;
+        reasons.push('Directly matches your ₹1.2Cr–₹1.5Cr entry luxury target with optimal capability.');
+      } else if (price <= 21000000) {
+        budgetScore = 0.6;
       } else {
-        budgetScore = 0.1;
+        budgetScore = 0.2;
       }
-    } else if (budgetRange === 'mid') {
-      if (price >= 2000000 && price <= 5500000) {
+    } else if (budgetRange === 'executive') {
+      if (price >= 14000000 && price <= 21000000) {
         budgetScore = 1.0;
-        reasons.push('Optimal balance of capability and price in the ₹25L–₹55L segment.');
-      } else if (price < 2000000) {
+        reasons.push('Prime fit for the executive luxury bracket (₹1.5Cr–₹2.1Cr).');
+      } else if (price < 14000000) {
         budgetScore = 0.8;
       } else {
-        budgetScore = 0.3;
-      }
-    } else if (budgetRange === 'premium') {
-      if (price >= 5000000 && price <= 9500000) {
-        budgetScore = 1.0;
-        reasons.push('Luxury automotive tier with high performance matching your ₹55L–₹90L range.');
-      } else if (price < 5000000) {
-        budgetScore = 0.7;
-      } else {
         budgetScore = 0.4;
       }
-    } else if (budgetRange === 'luxury') {
-      if (price >= 8500000) {
+    } else if (budgetRange === 'prestige') {
+      if (price >= 20000000 && price <= 35000000) {
         budgetScore = 1.0;
-        reasons.push('Flagship performance EV aligning with your ultra-luxury budget bracket.');
+        reasons.push('Ultra-luxury flagship grade aligned with your ₹2.1Cr–₹3.5Cr requirement.');
+      } else if (price < 20000000) {
+        budgetScore = 0.7;
+      } else {
+        budgetScore = 0.5;
+      }
+    } else if (budgetRange === 'pinnacle') {
+      if (price >= 35000000) {
+        budgetScore = 1.0;
+        reasons.push('Pinnacle bespoke automotive tier matching your ultra-high-net-worth bracket.');
       } else {
         budgetScore = 0.6;
       }

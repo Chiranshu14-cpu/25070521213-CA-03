@@ -60,7 +60,7 @@ const Compare = () => {
       metric: 'Range (km)',
       fullMark: 100,
       ...compareList.reduce((acc, v) => {
-        acc[v.name] = Math.min(100, Math.round((v.rangeKmClaimed / 708) * 100));
+        acc[v.name] = Math.min(100, Math.round((v.rangeKmClaimed / 857) * 100));
         return acc;
       }, {})
     },
@@ -78,8 +78,8 @@ const Compare = () => {
       metric: 'Battery Size',
       fullMark: 100,
       ...compareList.reduce((acc, v) => {
-        const val = v.batteryKwh || 40;
-        acc[v.name] = Math.min(100, Math.round((val / 85) * 100));
+        const val = v.batteryKwh || 75;
+        acc[v.name] = Math.min(100, Math.round((val / 125) * 100));
         return acc;
       }, {})
     },

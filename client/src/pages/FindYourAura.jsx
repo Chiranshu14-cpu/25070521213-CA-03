@@ -21,11 +21,11 @@ const QUESTIONS = [
     title: '2. What is your desired budget bracket?',
     subtitle: 'Mapped to verified approximate ex-showroom price ranges in ₹.',
     options: [
-      { label: 'Accessible Tier (Under ₹25 Lakh)', value: 'budget', hint: 'Tata Nexon.ev, Mahindra XUV400' },
-      { label: 'Executive Segment (₹25L – ₹55L)', value: 'mid', hint: 'BYD Seal, Hyundai IONIQ 5' },
-      { label: 'Premium Luxury (₹55L – ₹90L)', value: 'premium', hint: 'Kia EV6, BMW i4' },
-      { label: 'Flagship GT (> ₹90 Lakh)', value: 'luxury', hint: 'Porsche Taycan sports touring' },
-      { label: 'Flexible / Any Budget', value: 'any', hint: 'Prioritize engineering excellence' }
+      { label: 'Accessible Luxury (₹1.20 Cr – ₹1.50 Cr)', value: 'entry', hint: 'Porsche Macan Electric, Audi Q8 e-tron, BMW iX' },
+      { label: 'Executive Segment (₹1.50 Cr – ₹2.10 Cr)', value: 'executive', hint: 'Porsche Taycan, Mercedes EQS, Audi e-tron GT, BMW i7' },
+      { label: 'Prestige & Ultra-Luxury (₹2.10 Cr – ₹3.50 Cr)', value: 'prestige', hint: 'Mercedes-Maybach EQS SUV, Mercedes G 580' },
+      { label: 'Pinnacle Flagship (> ₹3.50 Crore)', value: 'pinnacle', hint: 'Rolls-Royce Spectre bespoke super-coupe' },
+      { label: 'Flexible Across All Tiers', value: 'any', hint: 'Evaluate purely by engineering merits' }
     ]
   },
   {
@@ -65,7 +65,7 @@ const FindYourAura = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState({
     dailyDistance: 50,
-    budgetRange: 'mid',
+    budgetRange: 'executive',
     seatingNeeds: 5,
     homeCharging: 'yes',
     topPriority: 'range'

@@ -36,7 +36,7 @@ beforeAll(async () => {
     await Vehicle.create(v);
   }
 
-  const sampleVehicle = await Vehicle.findOne({ slug: 'bmw-i4-edrive40' });
+  const sampleVehicle = await Vehicle.findOne({ slug: 'porsche-taycan' });
   sampleVehicleId = sampleVehicle._id.toString();
   sampleVehicleSlug = sampleVehicle.slug;
 });

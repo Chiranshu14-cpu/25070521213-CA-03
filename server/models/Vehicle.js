@@ -21,7 +21,16 @@ const vehicleSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ['Electric Sedan', 'Electric SUV', 'Electric Crossover', 'Electric Grand Tourer', 'Electric Hatchback'],
+    enum: [
+      'Electric Sedan',
+      'Electric SUV',
+      'Electric Crossover',
+      'Electric Grand Tourer',
+      'Electric Hatchback',
+      'Ultra-Luxury Electric Coupe',
+      'Ultra-Luxury Electric SUV',
+      'Electric Off-Road SUV'
+    ],
     default: 'Electric SUV'
   },
   bodyType: {
@@ -79,8 +88,8 @@ const vehicleSchema = new mongoose.Schema({
   },
   driveType: {
     type: String,
-    enum: ['RWD', 'AWD', 'FWD', 'Dual Motor AWD', 'Single Motor RWD', 'Single Motor FWD'],
-    default: 'RWD'
+    enum: ['RWD', 'AWD', 'FWD', 'Dual Motor AWD', 'Single Motor RWD', 'Single Motor FWD', 'Quad Motor AWD'],
+    default: 'AWD'
   },
   seats: {
     type: Number,
